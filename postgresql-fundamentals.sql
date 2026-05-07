@@ -1,0 +1,33 @@
+// CRUD COM BANCO DE DADOS SQL
+
+// CRIANDO TABELA DE ALUNOS - SQL
+CREATE TABLE aluno (
+	id SERIAL,
+	nome VARCHAR(255),
+	idade INTEGER,
+	ativo BOOLEAN
+);
+
+// INSERINDO DADOS NA TABELA DE ALUNO
+INSERT INTO aluno (nome, idade, ativo) VALUES 
+('João', 25, true),
+('Maria', 18, true),
+('carlos', 17, false)
+
+// SELECINANDO TABELA DE ALUNOS
+SELECT * FROM aluno;
+
+// FILTRANDO ALUNO ESPECIFICO ACIMA DE 20 ANOS
+SELECT * FROM aluno
+WHERE idade > 20;
+
+// ALTERANDO NOME DE ALUNO ESPECIFICA
+UPDATE aluno
+SET nome = 'Sabrina'
+WHERE id = 10;
+
+//DELETANDO ALUNO DA TABELA
+DELETE FROM aluno
+WHERE nome = 'carlos'
+
+	
